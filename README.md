@@ -8,19 +8,19 @@ CLI tool to generate sequelize models based on simple JSON config
 * inside your project 
 
 ```
-npm install --save-dev sequelize-generator
+npm install --save-dev sequelizator
 ```
 
 * globally
 
 ```
-npm install -g sequelize-generator
+npm install -g sequelizator
 ```
 
 ## Using
 
 ```
-sequelize-generator <folder>
+sequelizator <folder>
 ```
 
 * Sequelize models will be created inside `<folder>`
@@ -31,7 +31,7 @@ sequelize-generator <folder>
 ...
 "scripts": {
   ...
-  "sequelize-generator": "sequelize-generator ./src/models/",
+  "sequelizator": "sequelizator ./src/models/",
   ...
 },
 ...

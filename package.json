@@ -22,6 +22,9 @@
     "url": "https://github.com/joaogsleite/sequelizator/issues"
   },
   "homepage": "https://github.com/joaogsleite/sequelizator#readme",
+  "bin": {
+    "sequelizator": "./index.js"
+  },
   "dependencies": {
     "ejs": "^2.6.2"
   }
