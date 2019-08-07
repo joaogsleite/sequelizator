@@ -3,9 +3,9 @@
     "table": "users",
     "model": "User",
     "fields": {
-      "name": "String",
-      "email": "String",
-      "password": "String"
+      "name": "STRING",
+      "email": "STRING",
+      "password": "STRING"
     },
     "relations": [
       { "type": "1:n", "model": "Post" }
@@ -15,7 +15,7 @@
     "table": "posts",
     "model": "Post",
     "fields": {
-      "title": "String"
+      "title": "STRING"
     },
     "relations": [
       { "type": "n:n", "model": "Tag" }
@@ -25,7 +25,7 @@
     "table": "tags",
     "model": "Tag",
     "fields": {
-      "name": "String"
+      "name": "STRING"
     },
     "relations": [
       { "type": "n:n", "model": "Post" }

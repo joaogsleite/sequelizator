@@ -19,7 +19,7 @@ function readConfigFile(folderPath) {
 function render(template, data, destFolder, fileName) {
   return new Promise((resolve, reject) => {
     const options = {}
-    const templatePath = path.join(__dirname, 'templates', template)
+    const templatePath = path.join(__dirname, '..', 'templates', template)
     ejs.renderFile(templatePath, data, options, (error, result) => {
       if (error) {
         reject(error)

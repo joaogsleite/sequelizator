@@ -7,7 +7,7 @@
     "example": "example"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node src/index.js example/"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/joaogsleite/sequelizator#readme",
   "bin": {
-    "sequelizator": "./index.js"
+    "sequelizator": "./src/index.js"
   },
   "dependencies": {
     "ejs": "^2.6.2"
