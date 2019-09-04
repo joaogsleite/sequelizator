@@ -5,7 +5,7 @@ import Post from './Post'
 export default class Tag extends Model {
   static init (sequelize) {
     const schema = {
-      name: Sequelize.STRING,
+      name: {"type":"STRING"},
       
     }
     const options = { tableName: 'tags', sequelize }

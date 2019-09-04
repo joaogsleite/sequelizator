@@ -3,7 +3,10 @@
     "table": "users",
     "model": "User",
     "fields": {
-      "name": "STRING",
+      "name": {
+        "type": "STRING",
+        "allowNull": false
+      },
       "email": "STRING",
       "password": "STRING"
     },

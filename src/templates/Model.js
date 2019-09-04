@@ -7,7 +7,7 @@ export default class <%= modelName %> extends Model {
   static init (sequelize) {
     const schema = {
       <% Object.keys(fields).forEach(function(field){ -%>
-<%= field %>: Sequelize.<%= fields[field].type.toUpperCase() %>,
+<%= field %>: <%- JSON.stringify(fields[field]) %>,
       <% }); %>
     }
     const options = { tableName: '<%= tableName %>', sequelize }

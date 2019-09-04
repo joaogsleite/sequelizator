@@ -5,9 +5,9 @@ import Post from './Post'
 export default class User extends Model {
   static init (sequelize) {
     const schema = {
-      name: Sequelize.STRING,
-      email: Sequelize.STRING,
-      password: Sequelize.STRING,
+      name: {"type":"STRING","allowNull":false},
+      email: {"type":"STRING"},
+      password: {"type":"STRING"},
       
     }
     const options = { tableName: 'users', sequelize }
