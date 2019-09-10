@@ -6,8 +6,8 @@ import <%= model %> from './<%= model %>'<% -%>
 export default class <%= modelName %> extends Model {
   static init (sequelize) {
     const schema = {
-      <% Object.keys(fields).forEach(function(field){ -%>
-<%= field %>: <%- JSON.stringify(fields[field]) %>,
+      <% columns.forEach(function(column){ -%>
+<%= column.name %>: <%- JSON.stringify(normalizeSequelizeColumn(column)) %>,
       <% }); %>
     }
     const options = { tableName: '<%= tableName %>', sequelize }
@@ -38,8 +38,8 @@ export default class <%= modelName %> extends Model {
   toJSON() {
     return {
       id: this.id,
-      <% Object.keys(fields).forEach(function(field){ -%>
-<%= field %>: this.<%= field %>,
+      <% columns.forEach(function(column){ -%>
+<%= column.name %>: this.<%= column.name %>,
       <% }); %>
     }
   }

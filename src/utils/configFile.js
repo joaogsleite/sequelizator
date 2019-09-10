@@ -1,15 +1,10 @@
 
-
-function normalizeFields (fields) {
-  Object.keys(fields).forEach((key) => {
-    if (typeof fields[key] === 'string') {
-      fields[key] = {
-        type: fields[key],
-      }
-    }
-  })
-  return fields
-}
+function normalizeSequelizeColumn(column) {
+  return {
+    type: column.type,
+    allowNull: column.allowNull,
+  }
+} 
 
 function normalizeRelations (relations, { tableName, modelName, otherTables }) {
   otherTables.forEach((table = {}) => {
@@ -53,6 +48,6 @@ function normalizeRelations (relations, { tableName, modelName, otherTables }) {
 }
 
 module.exports = {
-  normalizeFields,
   normalizeRelations,
+  normalizeSequelizeColumn,
 }

@@ -15,7 +15,7 @@ declare class User extends Model {
   
   public name!: String  
   public email!: String  
-  public password!: String   
+  public email!:    
 
   public readonly createdAt!: Date
   public readonly updatedAt!: Date

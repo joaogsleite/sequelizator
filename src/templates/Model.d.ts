@@ -32,8 +32,8 @@ import { <%= model %> } from './<%= model %>'<% -%>
 
 declare class <%= modelName %> extends Model {
   public id!: number
-  <% Object.keys(fields).forEach(function(field){ %>
-  public <%= field %>!: <%= TYPES[fields[field].type] -%>
+  <% columns.forEach(function(column){ %>
+  public <%= column.name %>!: <%= TYPES[column.type] -%>
   <% }); %> 
 
   public readonly createdAt!: Date

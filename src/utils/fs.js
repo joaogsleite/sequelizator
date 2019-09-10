@@ -2,18 +2,8 @@ const fs = require('fs')
 const path = require('path')
 const ejs = require('ejs')
 
-function readConfigFile(folderPath) {
-  const filePath = path.join(folderPath, 'config.json')
-  return new Promise((resolve, reject) => {
-    fs.readFile(filePath, 'utf8', (error, data) => {
-      if (error) {
-        reject(error)
-      } else {
-        const json = JSON.parse(data)
-        resolve(json)
-      }
-    })
-  })
+function configFilePath(folderPath, configFile) {
+  return path.join(__dirname, '..', '..', folderPath, configFile)
 }
 
 function render(template, data, destFolder, fileName) {
@@ -39,6 +29,6 @@ function render(template, data, destFolder, fileName) {
 }
 
 module.exports = {
-  readConfigFile,
+  configFilePath,
   render,
 }
