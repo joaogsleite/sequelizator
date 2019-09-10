@@ -32,7 +32,7 @@ sequelizator <folder>
 
 * Sequelize models will be created inside `<folder>`
 * `<folder>` must contains a `config.js` file like this `example/config.js`
-* You can create a script in your project's package.json to run this way: `npm run sequelize-generator`
+* You can create a script in your project's package.json to run this way: `npm run sequelizator`
 
 ```
 ...
@@ -111,12 +111,6 @@ sequelizator <folder>
 ]
 ```
 
-
-[travis-badge]: https://travis-ci.com/joaogsleite/sequelizator.svg?branch=master
-[travis]: https://travis-ci.com/joaogsleite/sequelizator
-
-[codecov-badge]: https://codecov.io/gh/joaogsleite/sequelizator/branch/master/graph/badge.svg
-[codecov]: https://codecov.io/gh/joaogsleite/sequelizator
 
 [node]: https://img.shields.io/node/v/sequelizator.svg
 
