@@ -6,6 +6,7 @@ export default class Tag extends Model {
   static init (sequelize) {
     const schema = {
       name: {"type":"STRING"},
+      order: {"type":"INTEGER","allowNull":false,"defaultValue":1},
       
     }
     const options = { tableName: 'tags', sequelize }
@@ -27,6 +28,7 @@ export default class Tag extends Model {
     return {
       id: this.id,
       name: this.name,
+      order: this.order,
       
     }
   }

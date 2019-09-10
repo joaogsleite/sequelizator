@@ -17,7 +17,8 @@ import { Post } from './Post'
 declare class Tag extends Model {
   public id!: number
   
-  public name!: String   
+  public name!: string  
+  public order!: number   
 
   public readonly createdAt!: Date
   public readonly updatedAt!: Date

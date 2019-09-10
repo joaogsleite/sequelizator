@@ -7,6 +7,7 @@ export default class Post extends Model {
   static init (sequelize) {
     const schema = {
       title: {"type":"STRING"},
+      published: {"type":"BOOLEAN","allowNull":false,"defaultValue":true},
       
     }
     const options = { tableName: 'posts', sequelize }
@@ -28,6 +29,7 @@ export default class Post extends Model {
     return {
       id: this.id,
       title: this.title,
+      published: this.published,
       
     }
   }

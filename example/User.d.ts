@@ -13,9 +13,9 @@ import { Post } from './Post'
 declare class User extends Model {
   public id!: number
   
-  public name!: String  
-  public email!: String  
-  public email!:    
+  public name!: string  
+  public email!: string  
+  public password!: string   
 
   public readonly createdAt!: Date
   public readonly updatedAt!: Date

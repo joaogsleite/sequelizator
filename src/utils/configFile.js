@@ -3,6 +3,7 @@ function normalizeSequelizeColumn(column) {
   return {
     type: column.type,
     allowNull: column.allowNull,
+    defaultValue: column.defaultValue,
   }
 } 
 

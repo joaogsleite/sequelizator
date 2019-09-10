@@ -13,8 +13,8 @@ module.exports = [
         "type": "STRING",
       },
       {
-        "name": "email",
-        "password": "STRING",
+        "name": "password",
+        "type": "STRING",
       },
     ],
     "relations": [
@@ -29,6 +29,12 @@ module.exports = [
         "name": "title",
         "type": "STRING",
       },
+      {
+        "name": "published",
+        "type": "BOOLEAN",
+        "defaultValue": true,
+        "allowNull": false,
+      },
     ],
     "relations": [
       { "type": "n:n", "model": "Tag" }
@@ -41,6 +47,12 @@ module.exports = [
       {
         "name": "name",
         "type": "STRING",
+      },
+      {
+        "name": "order",
+        "type": "INTEGER",
+        "defaultValue": 1,
+        "allowNull": false,
       },
     ],
     "relations": [

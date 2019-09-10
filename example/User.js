@@ -7,7 +7,7 @@ export default class User extends Model {
     const schema = {
       name: {"type":"STRING","allowNull":false},
       email: {"type":"STRING"},
-      email: {},
+      password: {"type":"STRING"},
       
     }
     const options = { tableName: 'users', sequelize }
@@ -30,7 +30,7 @@ export default class User extends Model {
       id: this.id,
       name: this.name,
       email: this.email,
-      email: this.email,
+      password: this.password,
       
     }
   }

@@ -21,7 +21,8 @@ import { User } from './User'
 declare class Post extends Model {
   public id!: number
   
-  public title!: String   
+  public title!: string  
+  public published!: boolean   
 
   public readonly createdAt!: Date
   public readonly updatedAt!: Date
