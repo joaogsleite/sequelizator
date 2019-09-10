@@ -1,8 +1,6 @@
 
 # Sequelize generator
 
-[![Build Status][travis-badge]][travis]
-[![codecov][codecov-badge]][codecov]
 ![node][node]
 [![npm version][npm-badge]][npm]
 [![dependencies Status][dependencies-badge]][dependencies]
@@ -10,7 +8,7 @@
 [![PRs Welcome][prs-badge]][prs]
 [![GitHub][license-badge]][license]
 
-CLI tool to generate sequelize models based on simple JSON config
+CLI tool to generate sequelize models based on simple JS config
 
 ## Install
 
@@ -33,7 +31,7 @@ sequelizator <folder>
 ```
 
 * Sequelize models will be created inside `<folder>`
-* `<folder>` must contains a `config.json` file like this `example/config.json`
+* `<folder>` must contains a `config.js` file like this `example/config.js`
 * You can create a script in your project's package.json to run this way: `npm run sequelize-generator`
 
 ```
@@ -46,18 +44,28 @@ sequelizator <folder>
 ...
 ```
 
-## Example `config.json`
+## Example `config.js`
 
-```json
+```js
 [
   {
     "table": "users",
     "model": "User",
-    "fields": {
-      "name": "String",
-      "email": "String",
-      "password": "String"
-    },
+    "columns": [
+      {
+        "name": "name",
+        "type": "STRING",
+        "allowNull": false,
+      },
+      {
+        "name": "email",
+        "type": "STRING",
+      },
+      {
+        "name": "password",
+        "type": "STRING",
+      },
+    ],
     "relations": [
       { "type": "1:n", "model": "Post" }
     ]
@@ -65,9 +73,18 @@ sequelizator <folder>
   {
     "table": "posts",
     "model": "Post",
-    "fields": {
-      "title": "String"
-    },
+    "columns": [
+      {
+        "name": "title",
+        "type": "STRING",
+      },
+      {
+        "name": "published",
+        "type": "BOOLEAN",
+        "defaultValue": true,
+        "allowNull": false,
+      },
+    ],
     "relations": [
       { "type": "n:n", "model": "Tag" }
     ]
@@ -75,9 +92,18 @@ sequelizator <folder>
   {
     "table": "tags",
     "model": "Tag",
-    "fields": {
-      "name": "String"
-    },
+    "columns": [
+      {
+        "name": "name",
+        "type": "STRING",
+      },
+      {
+        "name": "order",
+        "type": "INTEGER",
+        "defaultValue": 1,
+        "allowNull": false,
+      },
+    ],
     "relations": [
       { "type": "n:n", "model": "Post" }
     ]
