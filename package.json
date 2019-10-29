@@ -1,6 +1,6 @@
 {
   "name": "sequelizator",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "CLI tool to generate sequelize models based on simple JSON config",
   "main": "./src/index.js",
   "engines": {
